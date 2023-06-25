@@ -13,7 +13,7 @@
 
 ![기능 순서도](https://drive.google.com/file/d/1EniO4pN1vLiTWE5ljwEXwl27Bytuj9_i/view?usp=drive_link)
 ### 3. 개발 내용
-![직선 차선 인식 알고리즘](https://drive.google.com/file/d/17zjvMJy6FdrFSHdUVU6uKsuTUkz5NWS8/view?usp=drive_link)
+직선 차선 인식 알고리즘 : 
 <img width="80%" src="https://github.com/bubblydummy/graduation_work2/issues/1#issue-1773325152.png"/>
 
 
