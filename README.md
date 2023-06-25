@@ -8,10 +8,14 @@
 
 ### 2. 기능블록도 및 기능 순서도
 ![기능 블록도](./path/to/function_block_diagram.png)
+<img width="80%" src="{이미지 경로}"/>
+
 
 ![기능 순서도](https://drive.google.com/file/d/1EniO4pN1vLiTWE5ljwEXwl27Bytuj9_i/view?usp=drive_link)
 ### 3. 개발 내용
 ![직선 차선 인식 알고리즘](https://drive.google.com/file/d/17zjvMJy6FdrFSHdUVU6uKsuTUkz5NWS8/view?usp=drive_link)
+<img width="80%" src="https://github.com/bubblydummy/graduation_work2/issues/1#issue-1773325152.png"/>
+
 
 ![차선 변경 판단 코드](https://drive.google.com/file/d/1DiZsSwUUL-XvM-56k-il5hizDTkGIfte/view?usp=drive_link)
 
