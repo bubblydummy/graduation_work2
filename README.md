@@ -17,17 +17,22 @@
 직선 차선 인식 알고리즘 : 
 <img width="80%" src="https://github.com/bubblydummy/graduation_work2/issues/1#issue-1773325152.png"/>
 
+차선 변경 판단 코드 : 
+<img width="80%" src="https://github.com/bubblydummy/graduation_work2/issues/5#issue-1773328829.png"/>
 
-![차선 변경 판단 코드](https://drive.google.com/file/d/1DiZsSwUUL-XvM-56k-il5hizDTkGIfte/view?usp=drive_link)
 
-![차선 변경 판단 코드 부연 설명](https://drive.google.com/file/d/1Vc3X3a7-mYaHcEeiG1E7cxc9oTDQcgyT/view?usp=drive_link)
+차선 변경 판단 코드 부연 설명 : 
+<img width="80%" src="https://github.com/bubblydummy/graduation_work2/issues/6#issue-1773328952.jpg"/>
+
 ### 4. 기대 효과
 - 방향지시등이 꺼져 있을 시, 차선 이탈 방지
 - 곡선 및 직선 차선 인식
 - 곡선 차선의 한계로 차선 내 흰색 장애물이 있을 시, 차선을 정확히 인지할 수 없는데, 이를 직선 차선 알고리즘을 이용하여 보완한다.
 
 ### 5. 작품 사진
-![작품 사진](https://drive.google.com/file/d/1vInYgFhpTso8YYJvabP_MLqvdTmX6yzW/view?usp=drive_link)
+작품 사진 : 
+<img width="80%" src="https://github.com/bubblydummy/graduation_work2/issues/3#issue-1773328294"/>
+
 ### 6. 보완 및 수정이 필요한 내용
 - 영상처리 속도 향상
 - LED 제어 미구현
