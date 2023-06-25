@@ -7,11 +7,12 @@
 
 
 ### 2. 기능블록도 및 기능 순서도
-![기능 블록도](./path/to/function_block_diagram.png)
-<img width="80%" src="{이미지 경로}"/>
+기능 블록도 : 
+<img width="80%" src="https://github.com/bubblydummy/graduation_work2/issues/4#issue-1773328722.png"/>
 
+기능 순서도 : 
+<img width="80%" src="https://github.com/bubblydummy/graduation_work2/issues/2#issue-1773327698.png"/>
 
-![기능 순서도](https://drive.google.com/file/d/1EniO4pN1vLiTWE5ljwEXwl27Bytuj9_i/view?usp=drive_link)
 ### 3. 개발 내용
 직선 차선 인식 알고리즘 : 
 <img width="80%" src="https://github.com/bubblydummy/graduation_work2/issues/1#issue-1773325152.png"/>
