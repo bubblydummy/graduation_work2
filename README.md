@@ -7,7 +7,7 @@
 
 
 ### 2. 기능블록도 및 기능 순서도
-![기능 블록도](https://drive.google.com/file/d/1nRxMBZr2pE70MxwfhrSsyuiaAnNc4OA8/view?usp=drive_link)
+![기능 블록도](./path/to/function_block_diagram.png)
 
 ![기능 순서도](https://drive.google.com/file/d/1EniO4pN1vLiTWE5ljwEXwl27Bytuj9_i/view?usp=drive_link)
 ### 3. 개발 내용
