@@ -187,7 +187,7 @@ def my_send(cmd, client): # 데이터 보내기
     data = pickle.dumps(cmd)
     client.sendall(data)
 
-# HOST='192.168.23.29'#pc
+# HOST='192.168.45.62'#pc
 # PORT=8485
 
 # # 1. 초기화
@@ -205,15 +205,21 @@ def my_send(cmd, client): # 데이터 보내기
 # # 4. accept
 # client,addr = server.accept()
 
+
+
+#--------저장된 동영상 받아오기>--------- [1]
+
 cap = cv2.VideoCapture('game.mp4') # 동영상 불러오기
 i = 0; num = 0; l_slope_arr=[]; r_slope_arr=[]; k=0; c_r=0; c_l=0
-#--------저장된 동영상 받아오기>---------
+
 # 영상 열기 성공했을 때 and (현재 프레임 수 = 총 프레임 수)일 때까지 반복
 while(cap.isOpened() and cap.get(cv2.CAP_PROP_POS_FRAMES) != cap.get(cv2.CAP_PROP_FRAME_COUNT)):
     
     ret,image = cap.read() # 프레임 받아오기 (ret: 성공여부, image: 현재 프레임)
     if not ret: break # 새로운 프레임을 못받아 왔을 때 break
-# #-------<라즈베리 파이 웹캠에서 받아오기>---------
+    
+    
+#-------<라즈베리 파이 웹캠에서 받아오기>--------- [2]
 # while(1):
 #     length = recvall(client, 16)
 #     stringData = recvall(client, int(length))
@@ -321,12 +327,13 @@ while(cap.isOpened() and cap.get(cv2.CAP_PROP_POS_FRAMES) != cap.get(cv2.CAP_PRO
             l_slope_arr.append(abs(l_slope))
             r_slope_arr.append(abs(r_slope))
             move = "mid"
+            print(l_slope,move)
             
-            
+        #------------< 차선 변경 판단 >-----------  
             if (R_x0-L_x0) < width and (R_x0-L_x0) > width/2: # 차선 간의 간격--★
                 if m_x0 < width/2-50: move = "right"
                 elif m_x0 > width/2+50: move = "left"
-                if k!=0 and k!=1 and k!=2:#절댓값이 증가하는 방향일때
+                if k!=0 and k!=1 and k!=2:#
                     if round(l_slope_arr[k],6)-round(l_slope_arr[k-1],6)>0 and round(l_slope_arr[k-1],6)-round(l_slope_arr[k-2],6)>0\
                         and round(l_slope_arr[k-2],6)-round(l_slope_arr[k-3],6)>0 and move=="left": 
                         if c_l==0:
