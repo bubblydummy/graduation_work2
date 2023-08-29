@@ -6,21 +6,6 @@ import threading
 import socket
 import pickle
 
-HOST='192.168.23.29'
-PORT=8485
-
-client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-print('Socket created')
-
-client.connect((HOST, PORT))
-print("connect")
-
-def my_recv(B_SIZE,client):
-    data = client.recv(B_SIZE)
-    if not data:
-        return data
-    cmd = pickle.loads(data)
-    return cmd
 
 Motor_A_EN    = 4
 Motor_B_EN    = 17
@@ -44,6 +29,17 @@ pwm_B = 0
 
 LED = 11
 SWICH = 15
+
+
+HOST='192.168.38.29'
+PORT=8485
+
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print('Socket created')
+
+client.connect((HOST, PORT))
+print("connect")
+
 
 def motorStop():#멈춤
    GPIO.output(Motor_A_Pin1, GPIO.HIGH)
@@ -72,6 +68,19 @@ def setup():#초기화
       pwm_B = GPIO.PWM(Motor_B_EN, 1000)
    except:
       pass
+
+
+
+def my_recv(B_SIZE,client): #데이터 수신
+    data = client.recv(B_SIZE)
+    if not data:
+        return data
+    cmd = pickle.loads(data)
+    return cmd
+
+
+setup()
+
 
 def motor_left(status, direction, speed):#Motor 2 positive and negative rotation
    if status == 0: # stop
@@ -121,7 +130,16 @@ def move(speed, direction, turn, radius=0.6):   # 0 < radius <= 1
             motor_right(1, 0, speed)
             time.sleep(0.3)
            
-        else: #멈춤
+        elif turn== 'up': #앞으로
+            print("start")
+            motor_right(1, 0, speed)
+            motor_left(1, 0, speed)
+            motor_right(0, 1, speed*0.1)
+            time.sleep(0.3)
+            print("end")
+            
+        elif turn=='down': #멈춤
+           
             time.sleep(0.3)
             print("stop")
             motorStop()

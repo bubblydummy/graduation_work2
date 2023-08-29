@@ -1,8 +1,14 @@
 import socket
+import move_final
 
 SERVER_IP = "0.0.0.0"  # 모든 IP 주소에서 연결을 받음
 SERVER_PORT = 10123
 
+def appCommand(message):
+    print("g")
+    move_final.move(30, 'forward', message, 0.6)
+    print("o")
+    
 def main():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((SERVER_IP, SERVER_PORT))
@@ -16,8 +22,17 @@ def main():
 
         message = client_socket.recv(1024).decode("utf-8")
         print("received message:", message)
+        appCommand(message)
+        
 
         client_socket.close()
+        
+        
+        
+
 
 if __name__ == "__main__":
     main()
+
+
+

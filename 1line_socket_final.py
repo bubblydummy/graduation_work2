@@ -172,7 +172,7 @@ def my_send(cmd, client): # 데이터 보내기
     data = pickle.dumps(cmd)
     client.sendall(data)
 
-HOST='192.168.23.29'
+HOST='192.168.38.29'
 PORT=8485
 
 # 1. 초기화
