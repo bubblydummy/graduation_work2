@@ -2,12 +2,11 @@ import socket
 import move_final
 
 SERVER_IP = "0.0.0.0"  # 모든 IP 주소에서 연결을 받음
-SERVER_PORT = 10123
+SERVER_PORT = 10123 #static port
 
 def appCommand(message):
-    print("g")
-    move_final.move(30, 'forward', message, 0.6)
-    print("o")
+    move_final.move(100, 'forward', message, 0.6)
+    
     
 def main():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -17,7 +16,7 @@ def main():
     print("server is started.")
 
     while True:
-        client_socket, client_address = server_socket.accept()
+        client_socket, client_address = server_socket.accept() #휴대폰 ip 주소, port는 임의 주소
         print("connected", client_address)
 
         message = client_socket.recv(1024).decode("utf-8")

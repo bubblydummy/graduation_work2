@@ -172,12 +172,13 @@ def my_send(cmd, client): # 데이터 보내기
     data = pickle.dumps(cmd)
     client.sendall(data)
 
-HOST='192.168.38.29'
-PORT=8485
+HOST='192.168.107.29' #pc ip
+PORT=8485 #pc port
 
 # 1. 초기화
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print('Socket created')
+
 
 # 2. bind
 server.bind((HOST,PORT))
